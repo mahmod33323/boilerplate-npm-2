@@ -15,12 +15,10 @@ app.get("/json", (req, res) => {
 app.get(
   "/now",
   (req, res, n) => {
-    console.log('fjfjfjfjfjjfjfkfkfkkfkfkfkffk')
-    console.log(console)
-    console.warn('fff')
     req.time = new Date().toString();
     n();
   },
   (req, res) => res.json({ time: req.time })
 );
+app.get("/:word/echo",(req,res)=>res.json(word:echo))
 module.exports = app;
