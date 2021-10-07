@@ -9,8 +9,8 @@ app.get("/json", (req, res) => {
     ? res.json({ message: "HELLO JSON" })
     : res.json({ message: "Hello json" });
 });
-app.use(function(req, res, next) {
-  console.log(ip);
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path} - ${req.ip}`);
   next();
-}) 
+});
 module.exports = app;
