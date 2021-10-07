@@ -15,6 +15,9 @@ app.get("/json", (req, res) => {
 app.get(
   "/now",
   (req, res, n) => {
+    console.log('fjfjfjfjfjjfjfkfkfkkfkfkfkffk')
+    console.log(console)
+    console.warn('fff')
     req.time = new Date().toString();
     n();
   },
