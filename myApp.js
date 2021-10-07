@@ -31,6 +31,10 @@ app.get("/:word/echo", (req, res) => {
   res.json({ echo: word });
 });
 
-app.get("/name",(req,res)=>{
-})
+app.get("/name", (req, res) => {
+  const { first, last } = req.query;
+  console.log(first, last);
+  res.json({ name: first.concat(` ${last}`) });
+  console.log(req.query);
+});
 module.exports = app;
