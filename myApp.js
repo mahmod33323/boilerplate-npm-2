@@ -12,4 +12,12 @@ app.get("/json", (req, res) => {
     ? res.json({ message: "HELLO JSON" })
     : res.json({ message: "Hello json" });
 });
+app.get("/now", (req, res, n) => {
+  console.log('JFJJFFJJFJFJFJFJFJjj')
+  
+  req.send(req.time)
+  n()
+}
+        // , (req, res) => {}
+       );
 module.exports = app;
