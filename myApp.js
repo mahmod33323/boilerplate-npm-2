@@ -26,9 +26,9 @@ app.get(
   (req, res) => res.json({ time: req.time })
 );
 
-app.get("/:ui/echo", (req, res) => {
-  const { bn }= req.params;
-  res.json({ echo: bn });
+app.get("/:word/echo", (req, res) => {
+  const { word }= req.params;
+  res.json({ echo: word });
   console.log(req.params);
 });
 
