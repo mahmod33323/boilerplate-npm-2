@@ -9,4 +9,8 @@ app.get("/json", (req, res) => {
     ? res.json({ message: "HELLO JSON" })
     : res.json({ message: "Hello json" });
 });
+app.use(function(req, res, next) {
+  console.log(ip);
+  next();
+}) 
 module.exports = app;
