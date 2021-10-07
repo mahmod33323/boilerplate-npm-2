@@ -3,8 +3,8 @@ var app = express();
 
 console.log("Hello World");
 const aph=__dirname+"/views/index.html"
-const apc=__dirname+"/public/style.css"
+const apu=__dirname+"/public"
 app.get("/", (req, res) => res.sendFile(aph));
-app.use(express.static(apc))
+app.use("/public",express.static(apu))
 
 module.exports = app;
