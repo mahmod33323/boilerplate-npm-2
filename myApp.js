@@ -20,5 +20,9 @@ app.get(
   },
   (req, res) => res.json({ time: req.time })
 );
-app.get("/:word/echo",(req,res)=>res.json(word:echo))
+app.get("/:word/echo", (req, res) => {
+  const {word}=req.params
+  res.json({ echo: word });
+  console.log(req.params);
+});
 module.exports = app;
