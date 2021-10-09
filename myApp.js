@@ -40,6 +40,7 @@ app.get("/name", (req, res) => {
 });
 
 app.post("/name", (req, res) => {
+  console.log(req)
   const { first, last } = req.body;
   res.json({ name: `${first} ${last}` });
 });
