@@ -40,9 +40,8 @@ app.get("/name", (req, res) => {
 });
 
 app.post("/name", (req, res) => {
-  console.log("___________---------___________");
-  //console.log(req);
-  console.log(bodyParser.json(req.body))
+  const { first, last } = req.body;
+  res.json({ name: `${first} ${last}` });
 });
 
 module.exports = app;
