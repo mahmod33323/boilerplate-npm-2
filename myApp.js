@@ -11,6 +11,11 @@ console.log("Hello World");
 
 app.get("/", (req, res) => res.sendFile(__dirname + "/views/index.html"));
 app.use("/public", express.static(__dirname + "/public"));
+app.use("/", (req, res, n) => {
+  bodyParser.urlencoded({ extended: false });
+  console.log("bp");
+  n();
+});
 
 app.get("/json", (req, res) => {
   process.env.MESSAGE_STYLE == "uppercase"
