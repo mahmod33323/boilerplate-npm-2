@@ -39,4 +39,10 @@ app.get("/name", (req, res) => {
   res.json({ name: first.concat(` ${last}`) });
 });
 
+app.post("/name", (req, res) => {
+  console.log("___________---------___________");
+  //console.log(req);
+  console.log(bodyParser.json(req.body))
+});
+
 module.exports = app;
